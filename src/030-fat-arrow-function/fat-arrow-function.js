@@ -1,22 +1,13 @@
 
-function sayHello(name) {
-  if (!name) name = 'World';
-  return "Hello " + name;
-}
+const sayHello = (name = 'World') => "Hello " + name;
 
-function createSession(speaker) {
-  return {
+const createSession = (speaker) => ({
     title: 'Modern JS!',
     speaker: speaker,
-  };
-}
+  });
 
-function multiplier(n) {
-  if (!n) n = 1;
-  return function (arg) {
-    return n * arg;
-  };
-}
+
+const multiplier = (n = 1) => arg => n * arg;
 
 export {
   sayHello,

@@ -1,15 +1,13 @@
 
-function printGreeting(name, language) {
-  if (!language) language = 'english';
+function printGreeting(name, language = 'english') {
+  let greeting = 'Hello';
   switch (language) {
     case 'french':
-      var greeting = 'Bonjour';
+      greeting = 'Bonjour';
       break;
     case 'spanish':
-      var greeting = 'Hola';
+      greeting = 'Hola';
       break;
-    default:
-      var greeting = 'Hello';
   }
 
   return greeting.toUpperCase() + "! " + name + ".";
